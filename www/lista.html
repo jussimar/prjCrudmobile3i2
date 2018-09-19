@@ -5,14 +5,59 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="components/loader.js"></script>
+    <script src="components/jquery-3.3.1.min.js"></script>
+    <script src="components/banco.js"></script>
     <script>
-        //
-        // TODO: Write JavaScript code here
-        //
+       $(document).ready(function(){
+           preenchepessoas();
+       });
     </script>
 </head>
 <body>
-    <!-- TODO: Please edit here -->
+    <div class="container">
+	    <div class="row">
+		      <div class="col-xs-12">
+              <h2>Listar Pessoas</h2>
+          </div>
+	    </div>
+      <div class="row">
+        <div class="col-xs-12">
+            <label for="">Lista de Nomes:</label>
+            <select name="lista" id="lista" class="form-control"> </select>
+        </div>
+      </div>
+      <div class="row">
+        <input type="hidden" id="codigo">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="">Nome:</label>
+            <input type="text" class="form-control" id="txtNome">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="">CPF:</label>
+            <input type="text" class="form-control" id="txtCpf">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4">
+          <button class="btn btn-danger">Deletar</button>
+        </div>
+        <div class="col-xs-4">
+          <button class="btn btn-warning">Editar</button>
+        </div>
+        <div class="col-xs-4">
+          <button class="btn btn-success">Salvar Edit</button>
+        </div>
+      </div>
+
+    </div>
 </body>
 </html>
