@@ -78,3 +78,39 @@ $(document).on("click","#deletar", function(){
         }
     });
 });
+
+$(document).on("click","#salvarEdit", function(){
+    var parametros = {
+        "codigo": $("#codigo").val(),
+        "nome": $("#txtNome").val(),
+        "cpf": $("#txtCpf").val()
+    };
+    $.ajax({
+        type:"post",
+        url:"https://crudmobile3i2-jussimar.c9users.io/atualizar.php",
+        data: parametros,
+        success: function(data){
+          navigator.notification.alert(data);
+          location.reload();
+        },
+        error:function(data){
+          navigator.notification.alert("erro: "+data);
+        }
+    });
+});
+$(document).on("click","#editar", function(){
+    habilita();
+});
+$(document).on("click","#cancelar", function(){
+   desabilita();
+   $("#txtNome").val("");
+   $("#txtCpf").val("");
+});
+function desabilita(){
+    $("#txtNome").prop('readonly',true);
+    $("#txtCpf").prop('readonly',true);
+}
+function habilita(){
+    $("#txtNome").prop('readonly',false);
+    $("#txtCpf").prop('readonly',false);
+}

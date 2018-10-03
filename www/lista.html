@@ -13,6 +13,7 @@
     <script>
        $(document).ready(function(){
            preenchepessoas();
+           desabilita();
        });
     </script>
 </head>
@@ -47,14 +48,17 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-4">
+        <div class="col-xs-3">
           <button class="btn btn-danger" id="deletar">Deletar</button>
         </div>
-        <div class="col-xs-4">
-          <button class="btn btn-warning">Editar</button>
+        <div class="col-xs-3">
+          <button class="btn btn-warning" id="editar">Editar</button>
         </div>
-        <div class="col-xs-4">
-          <button class="btn btn-success">Salvar Edit</button>
+        <div class="col-xs-3">
+          <button class="btn btn-primary" id="cancelar">Cancelar</button>
+        </div>
+        <div class="col-xs-3">
+          <button class="btn btn-success" id="salvarEdit">Salvar Edit</button>
         </div>
       </div>
 
